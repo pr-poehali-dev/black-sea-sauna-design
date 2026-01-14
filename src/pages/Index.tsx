@@ -220,7 +220,7 @@ const Index = () => {
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Адрес</h3>
                       <p className="text-muted-foreground text-lg">
-                        Сочи, Фермерский переулок 6/3
+                        Адлер, Фермерский переулок 6/3
                       </p>
                       <a 
                         href="https://yandex.ru/maps/?rtext=~43.585472,39.728111"
@@ -249,9 +249,7 @@ const Index = () => {
                       >
                         +7 938 450-22-28
                       </a>
-                      <p className="text-muted-foreground mt-2">
-                        Ежедневно с 9:00 до 23:00
-                      </p>
+
                     </div>
                   </div>
                 </CardContent>
