@@ -189,31 +189,102 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
-            Готовы к незабываемому отдыху?
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-in">
+            Контакты и местоположение
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Свяжитесь с нами для бронирования или уточнения деталей
-          </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <Button 
-              size="lg"
-              onClick={handleBooking}
-              variant="secondary"
-              className="text-lg px-8 py-6 hover:scale-105 transition-transform"
-            >
-              <Icon name="Phone" className="mr-2" size={20} />
-              Позвонить сейчас
-            </Button>
-            <a 
-              href="tel:+79384502228"
-              className="text-3xl font-bold tracking-wide hover:opacity-80 transition-opacity"
-            >
-              +7 938 450-22-28
-            </a>
+          <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <Card className="overflow-hidden animate-scale-in">
+              <CardContent className="p-0 h-full min-h-[400px]">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?ll=39.728111%2C43.585472&mode=search&oid=160878318027&ol=biz&z=17"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  className="min-h-[400px] lg:min-h-[500px]"
+                  title="Карта местоположения"
+                />
+              </CardContent>
+            </Card>
+
+            <div className="flex flex-col justify-center gap-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <Card className="border-2 hover:border-primary transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="MapPin" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Адрес</h3>
+                      <p className="text-muted-foreground text-lg">
+                        Сочи, Фермерский переулок 6/3
+                      </p>
+                      <a 
+                        href="https://yandex.ru/maps/?rtext=~43.585472,39.728111"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline mt-2 inline-block"
+                      >
+                        Построить маршрут →
+                      </a>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Phone" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Телефон</h3>
+                      <a 
+                        href="tel:+79384502228"
+                        className="text-2xl font-bold text-primary hover:opacity-80 transition-opacity"
+                      >
+                        +7 938 450-22-28
+                      </a>
+                      <p className="text-muted-foreground mt-2">
+                        Ежедневно с 9:00 до 23:00
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-2 hover:border-primary transition-all">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Icon name="Clock" size={24} className="text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2">Режим работы</h3>
+                      <p className="text-muted-foreground text-lg">
+                        Круглосуточно, 7 дней в неделю
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        Бронирование обязательно
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Button 
+                size="lg"
+                onClick={handleBooking}
+                className="text-lg px-8 py-6 hover:scale-105 transition-transform w-full"
+              >
+                <Icon name="Phone" className="mr-2" size={20} />
+                Забронировать сейчас
+              </Button>
+            </div>
           </div>
         </div>
       </section>
